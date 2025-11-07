@@ -20,8 +20,8 @@ The pipeline processes live-like audio streams using **multithreading**, ensurin
 - Splits audio into **overlapping chunks** (e.g., 3s duration, 1.5s hop) to simulate continuous input.
 
 ### 🔄 Real-Time Processing Pipeline (Multithreaded)
-| Thread | Task | Description |
-|:-------|:------|:------------|
+| Thread | Task |
+|:-------|:------|
 | 🎵 **Audio Thread** | Streams chunks sequentially with real-time delays. |
 | ✍️ **Transcription Thread** | Converts audio chunks to text using **Whisper**. |
 | 🧠 **Classification Thread** | Combines recent transcripts and uses **DistilBERT embeddings** + ML classifier to predict scam likelihood. |
